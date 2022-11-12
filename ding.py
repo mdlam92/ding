@@ -105,11 +105,10 @@ class DingResult:
 def execute() -> None:
     """CLI entrypoint."""
     ding_result = DingResult()
+    print(ding_result)
     if not ding_result.good:
-        print(ding_result)
         sys.exit("DOWN")
     else:
-        print(ding_result)
         print("UP")
 
 
