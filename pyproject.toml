@@ -1,0 +1,28 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ding"
+version = "0.1.0"
+description = ""
+authors = ["Mike Lamunion <mike.lamunion@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+dnspython = "^2.2.1"
+netifaces = "^0.11.0"
+psutil = "^5.9.4"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+ding = "ding:execute"
+
+[tool.flake8]
+max-line-length = 88
+exclude = "        .git/\n        .__pycache__/\n        tests/\n        tools/\n  sec_hil_manage/tumbler_tools/\n"
+extend-ignore = "        W503,\n        ANN101\n        ANN102,\n        ANN204,\n        ANN206,\n    "
+per-file-ignores = "        __init__.py: F401\n    "
+suppress-none-returning = true
